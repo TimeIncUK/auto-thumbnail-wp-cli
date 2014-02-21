@@ -1,0 +1,16 @@
+{
+        "name"       : "ipcmedia/ipc-includes",
+        "description": "Auto Thumbnail",
+        "homepage"   : "https://github.com/ipcmedia/ipc-includes",
+        "type"       : "wordpress-plugin",
+        "license"    : "GPL-2.0+",
+        "authors"    : [
+                {
+                        "name"    : "IPC Media",
+                        "homepage": "http://www.ipcmedia.com/"
+                }
+        ],
+        "require": {
+                "composer/installers": "~1.0"
+        }
+}
