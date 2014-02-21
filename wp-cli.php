@@ -49,7 +49,10 @@ class Auto_Thumbnail_Command extends WP_CLI_Command {
      	$progress = new \cli\progress\Bar( 'Progress',  $found_posts );
      	
      	// Counter for number of post successfully processed
-     	$counter = 0;
+     	$counter_success = 0;
+     	
+     	// Counter for number of post processed
+     	$counter_processed = 0;
      	
      	// The Loop
      	while ( $the_query->have_posts() ) :$the_query->the_post();
@@ -62,9 +65,10 @@ class Auto_Thumbnail_Command extends WP_CLI_Command {
      			if ($attached_image) {
      				foreach ($attached_image as $attachment_id => $attachment) {
      					set_post_thumbnail(get_the_ID(), $attachment_id);
-     					$counter++;
+     					$counter_success++;
      				}
      			}
+     			$counter_processed++;
      		}
      		
      		
@@ -78,7 +82,16 @@ class Auto_Thumbnail_Command extends WP_CLI_Command {
      	*/
      	wp_reset_postdata();
      	
-        WP_CLI::success( "Processing compelete. $counter of $found_posts where processed" );
+     	if($found_posts == 0){
+     		WP_CLI::error( "No posts found" );
+     	}elseif($counter_processed == 0){
+     		WP_CLI::error( "No posts processed" );
+     	}elseif($counter_success == 0){
+     		WP_CLI::success( "Unable to processed any posts" );
+     	}else{
+     		WP_CLI::success( "Processing compelete. $counter_success of $counter_processed where processed successfully." );
+     	}
+        
     }
 }
 
