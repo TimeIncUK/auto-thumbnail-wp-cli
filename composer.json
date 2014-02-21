@@ -1,7 +1,7 @@
 {
-        "name"       : "ipcmedia/ipc-includes",
-        "description": "Auto Thumbnail",
-        "homepage"   : "https://github.com/ipcmedia/ipc-includes",
+        "name"       : "ipcmedia/auto-thumbnail-wp-cli",
+        "description": "Auto Thumbnail WP-CLI",
+        "homepage"   : "https://github.com/ipcmedia/auto-thumbnail-wp-cli",
         "type"       : "wordpress-plugin",
         "license"    : "GPL-2.0+",
         "authors"    : [
