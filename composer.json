@@ -12,8 +12,5 @@
         ],
         "require": {
                 "composer/installers": "~1.0"
-        },
-	"autoload": {
-		"files": [ "auto-thumbnail-wp-cli.php" ]
-	}
+        }
 }
