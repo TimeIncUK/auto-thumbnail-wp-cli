@@ -1,7 +1,7 @@
 {
-        "name"       : "ipcmedia/auto-thumbnail-wp-cli",
+        "name"       : "timeincoss/auto-thumbnail-wp-cli",
         "description": "Auto Thumbnail WP-CLI",
-        "homepage"   : "https://github.com/ipcmedia/auto-thumbnail-wp-cli",
+        "homepage"   : "https://github.com/timeincoss/auto-thumbnail-wp-cli",
         "type"       : "wordpress-plugin",
         "license"    : "GPL-2.0+",
         "authors"    : [
