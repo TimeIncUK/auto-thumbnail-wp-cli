@@ -89,7 +89,7 @@ class Auto_Thumbnail_Command extends WP_CLI_Command {
      	}elseif($counter_success == 0){
      		WP_CLI::success( "Unable to processed any posts" );
      	}else{
-     		WP_CLI::success( "Processing compelete. $counter_success of $counter_processed where processed successfully." );
+     		WP_CLI::success( "Processing compelete. $counter_success of $counter_processed were processed successfully." );
      	}
         
     }
